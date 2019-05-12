@@ -1,0 +1,21 @@
+<p>
+  User: <%= @user %>
+</p>
+
+<p>
+  Email: <%= @user_data[@user][:email] %>
+</p>
+
+<p>
+  Interests: <%= @user_data[@user][:interests].join(", ") %>
+</p>
+
+
+Other users:
+  <ul>
+    <% @other_users.each do |user| %>
+      <li>
+        <a href="/<%= user %>"><%= user %></a>
+      </li>
+    <% end %>
+  </ul>
